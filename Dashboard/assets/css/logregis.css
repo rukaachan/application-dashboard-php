@@ -1,0 +1,64 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ROOT */
+
+/*  Comingsoon lightmode */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100%;
+  background-image: url("../img/bgform.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.text-register {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 30px;
+  color: #ffff;
+}
+
+.data-form {
+  display: block;
+  padding-top: 3em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+input[type=text],
+select,
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type=submit] {
+  width: 28vh;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  background: #6C63FF;
+}
+
+.text-error {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 30px;
+  color: red;
+}
