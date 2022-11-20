@@ -1,6 +1,11 @@
 <?php
-
 session_start();
+
+require_once("../core/koneksi.php");
+// $listdata = query("SELECT * FROM  db1_xirplb_1920_35_taufik");
+
+$sql = "SELECT * FROM t_barang";
+$query = mysqli_query($koneksi, $sql);
 
 if (!isset($_SESSION["login"])) {
     header("Location: ../models/login.php");
@@ -133,7 +138,7 @@ if (!isset($_SESSION["login"])) {
             <li>
                 <!-- menu -->
 
-                <a href="logout.php">
+                <a href="../models/logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log out</span>
                 </a>
@@ -167,123 +172,48 @@ if (!isset($_SESSION["login"])) {
                     <div class="box-toggle">
                         <h2>Book</h2>
                         <button class="btn">
-                            <a href="#" class="text-data">Add Data</a>
+                            <a href="dasboard_ form_rplb_35.php" class="text-data">Add Data</a>
                         </button>
                     </div>
                     <table>
-                        <thead>
-                            <tr>
-                                <td>Data 1</td>
-                                <td>Gambar</td>
-                                <td>Data 3</td>
-                                <td>Data 4</td>
-                                <td>Data 5</td>
-                                <td>Actions</td>
-                            </tr>
-                        </thead>
+                        <?php while ($row = mysqli_fetch_assoc($query)) : ?>
+                            <thead>
+                                <tr>
+                                    <td>Kode</td>
+                                    <td>Gambar</td>
+                                    <td>Judul</td>
+                                    <td>Penerbit</td>
+                                    <td>Jenis</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>Data</td>
-                                <td><img src="../assets/img/book.png" alt="Book" class="book-3d"></td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a href="">
-                                                    <i class='bx bxs-book'></i>Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="">
-                                                    <i class='bx bx-edit'></i> Edit
-                                                </a></button></li>
-                                        <li><button class="hapus"><a href="">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Data</td>
-                                <td><img src="../assets/img/book.png" alt="Book" class="book-3d"></td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a href="">
-                                                    <i class='bx bxs-book'></i> Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="">
-                                                    <i class='bx bx-edit'></i> Edit
-                                                </a></button></li>
-                                        <li><button class="hapus"><a href="">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Data</td>
-                                <td><img src="../assets/img/book.png" alt="Book" class="book-3d"></td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a href="">
-                                                    <i class='bx bxs-book'></i> Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="">
-                                                    <i class='bx bx-edit'></i> Edit
-                                                </a></button></li>
-                                        <li><button class="hapus"><a href="">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Data</td>
-                                <td><img src="../assets/img/book.png" alt="Book" class="book-3d"></td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a href="">
-                                                    <i class='bx bxs-book'></i> Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="">
-                                                    <i class='bx bx-edit'></i> Edit
-                                                </a></button></li>
-                                        <li><button class="hapus"><a href="">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Data</td>
-                                <td><img src="../assets/img/book.png" alt="Book" class="book-3d"></td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>Data</td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a href="">
-                                                    <i class='bx bxs-book'></i> Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="">
-                                                    <i class='bx bx-edit'></i> Edit
-                                                </a></button></li>
-                                        <li><button class="hapus"><a href="">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
+                            <tbody>
+                                <tr>
+                                    <td><?= $row["barang_kode"]; ?></td>
+                                    <td><img src="../assets/img/<?= $row["barang_gambar"]; ?>" alt="Barang" class="book-3d"></td>
+                                    <td><?= $row["barang_judul"]; ?></td>
+                                    <td><?= $row["barang_penerbit"]; ?> </td>
+                                    <td><?= $row["barang_jenis"]; ?> </td>
+                                    <td>
+                                        <ul>
+                                            <li><button class="detail"><a href="dasboard_detaildata_rplb_35.php?id=<?= $row["barang_kode"]; ?>">
+                                                        <i class='bx bxs-book'></i>Detail
+                                                    </a></button></li>
+                                            <li><button class="edit"><a href="">
+                                                        <i class='bx bx-edit'></i> Edit
+                                                    </a></button></li>
+                                            <li><button class="hapus"><a href="">
+                                                        <i class='bx bxs-trash'></i> Hapus
+                                                    </a></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        <?php endwhile; ?>
                     </table>
                 </div>
 
