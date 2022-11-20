@@ -2,6 +2,12 @@
 
 require_once('../core/koneksi.php');
 
+function hapus($id)
+{
+    global $koneksi;
+    mysqli_query($koneksi, "DELETE FROM t_barang WHERE barang_kode = $id");
+    return mysqli_affected_rows($koneksi);
+}
 
 function registrasi($data)
 {
