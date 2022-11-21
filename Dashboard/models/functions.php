@@ -18,7 +18,6 @@ function getData($id) {
     $query = mysqli_query($koneksi, $sql);
     $row = mysqli_fetch_assoc($query);
     
-
     return $row;
 }
 
