@@ -1,14 +1,10 @@
 <?php
 session_start();
 
-require_once("../core/koneksi.php");
-// $listdata = query("SELECT * FROM  db1_xirplb_1920_35_taufik");
-
-$sql = "SELECT * FROM t_barang";
-$query = mysqli_query($koneksi, $sql);
+require_once("../controller/c_dashboard.php");
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../models/login.php");
+    header("Location: ../barang/login.php");
     exit;
 }
 
@@ -68,7 +64,7 @@ if (!isset($_SESSION["login"])) {
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Menu</a></li>
                     <li><a href="dasboard_listdata_rplb_35.php">List Tabel</a></li>
-                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
+                    <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=detail">Detail Data</a></li>
                     <li><a href="#">Menu</a></li>
                 </ul>
             </li>
@@ -176,17 +172,18 @@ if (!isset($_SESSION["login"])) {
                         </button>
                     </div>
                     <table>
-                        <?php while ($row = mysqli_fetch_assoc($query)) : ?>
-                            <thead>
-                                <tr>
-                                    <td>Kode</td>
-                                    <td>Gambar</td>
-                                    <td>Judul</td>
-                                    <td>Penerbit</td>
-                                    <td>Jenis</td>
-                                    <td>Actions</td>
-                                </tr>
-                            </thead>
+                        <thead>
+                            <tr>
+                                <td>Kode</td>
+                                <td>Gambar</td>
+                                <td>Judul</td>
+                                <td>Penerbit</td>
+                                <td>Jenis</td>
+                                <td>Actions</td>
+                            </tr>
+                        </thead>
+
+                        <?php foreach ($data as $row) : ?>
 
                             <tbody>
                                 <tr>
@@ -197,23 +194,20 @@ if (!isset($_SESSION["login"])) {
                                     <td><?= $row["barang_jenis"]; ?> </td>
                                     <td>
                                         <ul>
-                                            <li><button class="detail"><a href="dasboard_detaildata_rplb_35.php?id=<?= $row["barang_kode"]; ?>">
+                                            <li><button class="detail"><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=detail&id=<?= $row["barang_kode"]; ?>">
                                                         <i class='bx bxs-book'></i>Detail
                                                     </a></button></li>
                                             <li><button class="edit"><a href="">
                                                         <i class='bx bx-edit'></i> Edit
                                                     </a></button></li>
-                                            <li><button class="hapus"><a href="">
+                                            <li><button class="hapus"><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=hapus&id=<?= $row["barang_kode"] ?>" onclick=" return confirm('yakin?');">
                                                         <i class='bx bxs-trash'></i> Hapus
                                                     </a></button></li>
                                         </ul>
                                     </td>
                                 </tr>
-                                <tr>
-                                    </td>
-                                </tr>
+                            <?php endforeach; ?>
                             </tbody>
-                        <?php endwhile; ?>
                     </table>
                 </div>
 
