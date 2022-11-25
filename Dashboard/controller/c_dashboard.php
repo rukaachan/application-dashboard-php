@@ -4,7 +4,7 @@ define("BASE", "http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controllers/
 
 $aksi = $_GET["aksi"];
 require_once("../models/functions.php");
-require_once("../app/helpers/form_helper.php");
+require_once("../app/helpers/form_helpers.php");
 
 // perintah jika memilih aksi list
 if ($aksi == "list") {
