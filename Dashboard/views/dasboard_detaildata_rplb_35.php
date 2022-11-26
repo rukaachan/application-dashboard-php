@@ -26,7 +26,8 @@ if (!isset($_SESSION["login"])) {
 
 <body>
 
-    <!-- sidebar -->
+    <!--Start Sidebar  -->
+
     <div class="sidebar close">
 
         <!-- logo -->
@@ -41,14 +42,11 @@ if (!isset($_SESSION["login"])) {
 
                 <!-- menu -->
 
-                <a href="dashboard_rplb_35.html">
+                <a href="dashboard_rplb_35.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
 
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Category</a></li>
-                </ul>
             </li>
             <li>
 
@@ -57,45 +55,41 @@ if (!isset($_SESSION["login"])) {
                 <div class="iocn-link">
                     <a href="#">
                         <i class='bx bx-collection'></i>
-                        <span class="link_name">Category</span>
+                        <span class="link_name">List Data</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Menu</a></li>
-                    <li><a href="dasboard_listdata_rplb_35.php">List Tabel</a></li>
-                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="dasboard_listdata_rplb_35.php">List Data</a></li>
                 </ul>
             </li>
 
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="dasboard_detaildata_rplb_35.php">
                         <i class='bx bx-book-alt'></i>
-                        <span class="link_name">Posts</span>
+                        <span class="link_name">Detail Data</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Posts</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
                 </ul>
             </li>
             <li>
 
-                <!-- menu -->
-
-                <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="link_name">Analytics</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Analytics</a></li>
+                <div class="iocn-link">
+                    <a href="dasboard_form_rplb_35.php">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="link_name">Form</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="dasboard_form_rplb_35.php">Form</a></li>
                 </ul>
+
             </li>
             <li>
 
@@ -134,13 +128,16 @@ if (!isset($_SESSION["login"])) {
             <li>
                 <!-- menu -->
 
-                <a href="#">
+                <a href="../models/logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log out</span>
                 </a>
             </li>
         </ul>
     </div>
+
+    <!-- End Sidebar -->
+
 
     <!-- home -->
 
@@ -174,8 +171,9 @@ if (!isset($_SESSION["login"])) {
 
                     <div class="container-detaildata">
                         <div class="container-wrap">
-                            <img src="../assets/img/book.png">
-                            <p class="under-image">Kode Buku Disini</p>
+                            <img src="#" alt="Barang">
+                            <h4 class="under-image"></h4>
+
                             <div class="button">
                                 <button class="btn-kembali">
                                     <a href="#" class="text-data">Kembali</a>
@@ -185,22 +183,19 @@ if (!isset($_SESSION["login"])) {
                         <div class="text">
 
                             <p class="text-info">Judul</p>
-                            <h3>Data</h3>
+                            <h3></h3>
 
                             <p class="text-info">Penerbit</p>
-                            <h3>Data</h3>
+                            <h3></h3>
 
                             <p class="text-info">Jenis Buku</p>
-                            <h3>Data</h3>
-
-                            <p class="text-info">Genre Buku</p>
-                            <h3>Data</h3>
+                            <h3></h3>
 
                             <p class="text-info">Stok</p>
-                            <h3>Data</h3>
+                            <h3></h3>
 
-                            <p class="text-info">Sinopsis</p>
-                            <h3>Data</h3>
+                            <p class="text-info">Catatan</p>
+                            <h3>></h3>
 
                         </div>
                     </div>
