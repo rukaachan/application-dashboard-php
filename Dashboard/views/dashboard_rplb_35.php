@@ -7,27 +7,27 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-?> 
+?>
 
 <!DOCTYPE html>
-
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Detail Data</title>
 </head>
 
 <body>
 
-    <!-- sidebar -->
+    <!--Start Sidebar  -->
+
     <div class="sidebar close">
 
         <!-- logo -->
@@ -42,7 +42,7 @@ if (!isset($_SESSION["login"])) {
 
                 <!-- menu -->
 
-                <a href="#">
+                <a href="dashboard_rplb_35.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -55,38 +55,41 @@ if (!isset($_SESSION["login"])) {
                 <div class="iocn-link">
                     <a href="#">
                         <i class='bx bx-collection'></i>
-                        <span class="link_name">Category</span>
+                        <span class="link_name">List Data</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Menu</a></li>
-                    <li><a href="dasboard_listdata_rplb_35.php">List Tabel</a></li>
-                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="dasboard_listdata_rplb_35.php">List Data</a></li>
                 </ul>
             </li>
 
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="dasboard_detaildata_rplb_35.php">
                         <i class='bx bx-book-alt'></i>
-                        <span class="link_name">Form</span>
+                        <span class="link_name">Detail Data</span>
                     </a>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
+                <ul class="sub-menu">
+                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
+                </ul>
             </li>
             <li>
 
-                <!-- menu -->
-
-                <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="link_name">Analytics</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Analytics</a></li>
+                <div class="iocn-link">
+                    <a href="dasboard_form_rplb_35.php">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="link_name">Form</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="dasboard_form_rplb_35.php">Form</a></li>
                 </ul>
+
             </li>
             <li>
 
@@ -125,13 +128,16 @@ if (!isset($_SESSION["login"])) {
             <li>
                 <!-- menu -->
 
-                <a href="logout.php">
+                <a href="../models/logout.php">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log out</span>
                 </a>
             </li>
         </ul>
     </div>
+
+    <!-- End Sidebar -->
+
 
     <!-- home -->
 
@@ -150,108 +156,55 @@ if (!isset($_SESSION["login"])) {
             <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
         </div>
 
-        <!-- main-text  -->
-        <div class="main-text">
-            <h4>Dashboard</h4>
-        </div>
+        <!-- Tabel Detail Data List -->
+        <div class="tabel">
 
-        <!-- Card -->
-        <div class="home-card">
-            <div class="overview-boxes">
+            <!-- Detail Data List -->
+            <div class="data-list">
+                <div class="content-data">
+                    <div class="box-toggle">
+                        <h2>Detail Data</h2>
+                        <button class="btn">
+                            <a href="#" class="text-data">Edit</a>
+                        </button>
+                    </div>
 
-                <!-- box Total Order -->
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Order</div>
-                        <div class="number">40,876</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
+                    <div class="container-detaildata">
+                        <div class="container-wrap">
+                            <img src="#" alt="Barang">
+                            <h4 class="under-image"></h4>
+
+                            <div class="button">
+                                <button class="btn-kembali">
+                                    <a href="#" class="text-data">Kembali</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text">
+
+                            <p class="text-info">Judul</p>
+                            <h3>#<< /h3>
+
+                                    <p class="text-info">Penerbit</p>
+                                    <h3>#< ?>
+                                    </h3>
+
+                                    <p class="text-info">Jenis Buku</p>
+                                    <h3>#<< /h3>
+
+                                            <p class="text-info">Stok</p>
+                                            <h3>#</h3>
+
+                                            <p class="text-info">Catatan</p>
+                                            <h3>#></h3>
+
                         </div>
                     </div>
-                    <i class='bx bx-cart-alt cart'></i>
                 </div>
-                <div class="box">
-
-                    <!-- box Total Sales -->
-                    <div class="right-side">
-                        <div class="box-topic">Total Sales</div>
-                        <div class="number">38,876</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
-                        </div>
-                    </div>
-                    <i class='bx bxs-cart-add cart two'></i>
-                </div>
-                <div class="box">
-
-                    <!-- box Total Profit -->
-                    <div class="right-side">
-                        <div class="box-topic">Total Profit</div>
-                        <div class="number">$12,876</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
-                        </div>
-                    </div>
-                    <i class='bx bx-cart cart three'></i>
-                </div>
-                <div class="box">
-
-                    <!-- box Total Return -->
-                    <div class="right-side">
-                        <div class="box-topic">Total Return</div>
-                        <div class="number">11,086</div>
-                        <div class="indicator">
-                            <i class='bx bx-down-arrow-alt down'></i>
-                            <span class="text">Down From Today</span>
-                        </div>
-                    </div>
-                    <i class='bx bxs-cart-download cart four'></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- chart and report -->
-
-        <div class="data">
-            <div class="content-data">
-                <!-- make box -->
-                <div class="head">
-                    <h3 class="main-text">Report</h3>
-                </div>
-
-                <!-- report chart -->
-                <div class="chart">
-                    <div id="chart"></div>
-                </div>
-            </div>
-            <div class="content-data-donut">
-                <div class="head">
-                    <h3 class="main-text">Report</h3>
-                </div>
-                <div class="donut">
-                    <div id="donut"></div>
-                </div>
-            </div>
-        </div>
-
     </section>
-
-
-    <!-- footer -->
-
-    <section class="footer">
-        <div class="home-footer">
-            <h3>Administrator</h3>
-        </div>
-    </section>
-
 
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 
-</html>
+</html> 
