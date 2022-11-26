@@ -4,7 +4,7 @@ session_start();
 require_once("../controller/c_dashboard.php");
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../barang/login.php");
+    header("Location: ../models/login.php");
     exit;
 }
 
@@ -26,7 +26,8 @@ if (!isset($_SESSION["login"])) {
 
 <body>
 
-    <!-- sidebar -->
+    <!--Start Sidebar  -->
+
     <div class="sidebar close">
 
         <!-- logo -->
@@ -41,14 +42,11 @@ if (!isset($_SESSION["login"])) {
 
                 <!-- menu -->
 
-                <a href="dashboard_rplb_35.html">
+                <a href="dashboard_rplb_35.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
 
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Category</a></li>
-                </ul>
             </li>
             <li>
 
@@ -57,45 +55,41 @@ if (!isset($_SESSION["login"])) {
                 <div class="iocn-link">
                     <a href="#">
                         <i class='bx bx-collection'></i>
-                        <span class="link_name">Category</span>
+                        <span class="link_name">List Data</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Menu</a></li>
-                    <li><a href="dasboard_listdata_rplb_35.php">List Tabel</a></li>
-                    <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=detail">Detail Data</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="dasboard_listdata_rplb_35.php">List Data</a></li>
                 </ul>
             </li>
 
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="dasboard_detaildata_rplb_35.php">
                         <i class='bx bx-book-alt'></i>
-                        <span class="link_name">Posts</span>
+                        <span class="link_name">Detail Data</span>
                     </a>
-                    <i class='bx bxs-chevron-down arrow'></i>
+                    <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Posts</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
                 </ul>
             </li>
             <li>
 
-                <!-- menu -->
-
-                <a href="#">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="link_name">Analytics</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Analytics</a></li>
+                <div class="iocn-link">
+                    <a href="dasboard_form_rplb_35.php">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="link_name">Form</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="dasboard_form_rplb_35.php">Form</a></li>
                 </ul>
+
             </li>
             <li>
 
@@ -142,6 +136,9 @@ if (!isset($_SESSION["login"])) {
         </ul>
     </div>
 
+    <!-- End Sidebar -->
+
+
     <!-- home -->
 
     <section class="home-section">
@@ -168,7 +165,7 @@ if (!isset($_SESSION["login"])) {
                     <div class="box-toggle">
                         <h2>Book</h2>
                         <button class="btn">
-                            <a href="dasboard_ form_rplb_35.php" class="text-data">Add Data</a>
+                            <a href="<?php BASE ?>=form" class="text-data">Add Data</a>
                         </button>
                     </div>
                     <table>
@@ -185,29 +182,36 @@ if (!isset($_SESSION["login"])) {
 
                         <?php foreach ($data as $row) : ?>
 
-                            <tbody>
-                                <tr>
-                                    <td><?= $row["barang_kode"]; ?></td>
-                                    <td><img src="../assets/img/<?= $row["barang_gambar"]; ?>" alt="Barang" class="book-3d"></td>
-                                    <td><?= $row["barang_judul"]; ?></td>
-                                    <td><?= $row["barang_penerbit"]; ?> </td>
-                                    <td><?= $row["barang_jenis"]; ?> </td>
-                                    <td>
-                                        <ul>
-                                            <li><button class="detail"><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=detail&id=<?= $row["barang_kode"]; ?>">
-                                                        <i class='bx bxs-book'></i>Detail
-                                                    </a></button></li>
-                                            <li><button class="edit"><a href="">
+                        <tbody>
+                            <tr>
+                                <td><?= $row["barang_kode"]; ?></td>
+                                <td><img src="../assets/img/<?= $row["barang_gambar"]; ?>" alt="Barang" class="book-3d">
+                                </td>
+                                <td><?= $row["barang_judul"]; ?></td>
+                                <td><?= $row["barang_penerbit"]; ?> </td>
+                                <td><?= $row["barang_jenis"]; ?> </td>
+                                <td>
+                                    <ul>
+                                        <li><button class="detail"><a
+                                                    href="<?php BASE ?>detail&id=<?= $row["barang_kode"]; ?>">
+                                                    <i class='bx bxs-book'></i>Detail
+                                                </a></button></li>
+                                        <li><button class="edit"><a href="<?php BASE ?>editform&id=<?= $row["ediit"];>
                                                         <i class='bx bx-edit'></i> Edit
                                                     </a></button></li>
-                                            <li><button class="hapus"><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=hapus&id=<?= $row["barang_kode"] ?>" onclick=" return confirm('yakin?');">
-                                                        <i class='bx bxs-trash'></i> Hapus
-                                                    </a></button></li>
-                                        </ul>
-                                    </td>
-                                </tr>
+                                            <li><button class="hapus"><a
+                                                        href="<?php BASE ?>=hapus&id=<?= $row["barang_kode"] ?>"
+                                                    onclick=" return confirm('yakin?');">
+                                                    <i class='bx bxs-trash'></i> Hapus
+                                                </a></button></li>
+                                    </ul>
+                                </td>
+                            </tr>
                             <?php endforeach; ?>
-                            </tbody>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
 
