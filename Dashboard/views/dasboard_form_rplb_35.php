@@ -2,8 +2,6 @@
 
 session_start();
 
-require_once("../controller/c_dashboard.php");
-
 if (!isset($_SESSION["login"])) {
     header("Location: ../models/login.php");
     exit;
@@ -169,77 +167,64 @@ if (!isset($_SESSION["login"])) {
                 </div>
 
                 <div class="container-form">
-                    <form action="" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <form action="<?= BASE ?>prosestambah" method="POST" autocomplete="off" enctype="multipart/form-data">
                         <div class="box">
                             <div>
-                                <!-- KODE BARANG -->
-                                <label for="kbuku">Kode Barang : </label><br>
-                                <input type="text" name="txtkode" id="kbuku" required><br>
+                                <!-- KODE -->
+                                <label>Kode :</label><br>
+                                <input type="text" name="txt_kode" required><br>
 
-                                <!-- JUDUL BARANG -->
-                                <label for="jbuku">Judul Barang : </label><br>
-                                <input type="text" name="txtjudul" id="jbuku" required><br>
+                                <!-- NAMA -->
+                                <label>Nama :</label><br>
+                                <input type="text" name="txt_nama" required><br>
 
-                                <!-- PENERBIT BARANG -->
-                                <label for="perbuku">Penerbit Barang : </label><br>
-                                <input type="text" name="txtpenerbit" id="pbrang" required><br>
-
-                                <!-- STOK BARANG -->
-                                <label for="perbuku">Stok Barang : </label><br>
-                                <input type="number" name="intstok" id="sbrang" required><br>
-
-                                <!-- <select id="perbuku" name="perbuku">
-                                    <option disabled selected hidden value="Penerbit">Penerbit</option>
-                                    <option value="Data 1">Data </option>
-                                    <option value="Data 1">Data </option>
-                                    <option value="Data 1">Data </option>
-                                    <option value="Data 1">Data </option>
-                                    <option value="Data 1">Data </option>
-                                </select> -->
+                                <!-- Agama -->
+                                <label>Agama : </label><br>
+                                <select id="perbuku" name="select_agama">
+                                    <option disabled selected hidden value="Agama">Pilih Agama</option>
+                                    <option>ISLAM</option>
+                                    <option>KRISTEN</option>
+                                    <option>BUDDHA</option>
+                                    <option>HINDU</option>
+                                </select>
+                                <br>
 
                             </div>
 
                             <div class="space">
 
+                                <!-- JENIS KELAMIN -->
+                                <label>Jenis Kelamin :</label><br>
+                                <input type="radio" name="rd_jenkel" value="L">L<br>
+                                <input type="radio" name="rd_jenkel" value="P">P<br>
 
-                                <!-- JENIS BARANG -->
-                                <label for="jbarang">Jenis Barang :</label><br>
-                                <input type="radio" name="rdjenis" id="data" value="Pakaian">Pakaian<br>
-                                <input type="radio" name="rdjenis" id="data" value="Makeup">Makeup<br>
-                                <input type="radio" name="rdjenis" id="data" value="Alat">Alat<br>
-                                <input type="radio" name="rdjenis" id="data" value="Rumah Tangga">Rumah Tangga<br>
-                                <input type="radio" name="rdjenis" id="data" value="Mainan">Mainan<br>
-                                <input type="radio" name="rdjenis" id="data" value="Desain">Desain<br><br>
+                                <br>
 
-                                <!-- SENSITIVITAS BARANG -->
-                                <label for="chbarang">Sensitivitas Barang :</label><br>
-                                <input type="checkbox" name="cbarang" value="Mudah Pecah">Mudah Pecah<br>
-                                <input type="checkbox" name="cbarang" value="Anti Pecah">Anti Pecah<br>
+                                <!-- GAMBAR -->
+                                <label="gbrang">Gambar : </label><br>
+                                    <input type="file" name="file_gambar">
+
                             </div>
 
                             <div class="space">
 
-                                <!-- GAMBAR BARANG -->
-                                <label for="gbrang">Gambar Barang : </label><br>
-                                <input type="file" name="file_barang" required>
-                                <br><br><br><br>
-
-                                <!-- CATATAN BARANG -->
-                                <label for="ctatan">Catatan Barang : </label><br>
-                                <textarea id="catbarang" name="catbarang" rows="3" cols="0"></textarea>
+                                <!-- CATATAN ALAMAT -->
+                                <label>Alamat : </label>
+                                <br>
+                                <textarea class="form-control" name="txt_alamat"></textarea>
                                 <br><br>
 
                                 <!-- SUBMIT -->
-                                <input type="submit" name="submit" required>
+                                <button type="submit" name="simpan">Tambah Baru</button>
                             </div>
                     </form>
                 </div>
             </div>
         </div>
-        </div>
+    </section>
 
-        <!-- JavaScript -->
-        <script src="../assets/js/script.js"></script>
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
 </body>
 
 </html>
