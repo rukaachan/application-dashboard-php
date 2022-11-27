@@ -195,13 +195,13 @@ if (!isset($_SESSION["login"])) {
 
                                 <!-- JENIS KELAMIN -->
                                 <label>Jenis Kelamin :</label><br>
-                                <input type="radio" name="rd_jenkel" value="L">L<br>
-                                <input type="radio" name="rd_jenkel" value="P">P<br>
+                                <input type="radio" name="rd_jenkel" value="L">Laki-Laki<br>
+                                <input type="radio" name="rd_jenkel" value="P">Perempuan<br>
 
                                 <br>
 
                                 <!-- GAMBAR -->
-                                <label="gbrang">Gambar : </label><br>
+                                <label>Gambar : </label><br>
                                     <input type="file" name="file_gambar">
 
                             </div>
