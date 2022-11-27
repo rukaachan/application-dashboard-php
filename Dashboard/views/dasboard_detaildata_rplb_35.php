@@ -42,7 +42,7 @@ if (!isset($_SESSION["login"])) {
 
                 <!-- menu -->
 
-                <a href="dashboard_rplb_35.php">
+                <a href="<?= BASE ?>dashboard">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -53,41 +53,41 @@ if (!isset($_SESSION["login"])) {
                 <!-- dropdown -->
 
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="<?= BASE ?>list">
                         <i class='bx bx-collection'></i>
                         <span class="link_name">List Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_listdata_rplb_35.php">List Data</a></li>
+                    <li><a href="<?= BASE ?>list">List Data</a></li>
                 </ul>
             </li>
 
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="dasboard_detaildata_rplb_35.php">
+                    <a href="<?= BASE ?>detail">
                         <i class='bx bx-book-alt'></i>
                         <span class="link_name">Detail Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
+                    <li><a href="<?= BASE ?>detail">Detail Data</a></li>
                 </ul>
             </li>
             <li>
 
                 <div class="iocn-link">
-                    <a href="dasboard_form_rplb_35.php">
+                    <a href="<?= BASE ?>tambah">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">Form</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_form_rplb_35.php">Form</a></li>
+                    <li><a href="<?= BASE ?>tambah">Form</a></li>
                 </ul>
 
             </li>
@@ -128,7 +128,7 @@ if (!isset($_SESSION["login"])) {
             <li>
                 <!-- menu -->
 
-                <a href="../models/logout.php">
+                <a href="<?= BASE ?>logout">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log out</span>
                 </a>
@@ -176,26 +176,26 @@ if (!isset($_SESSION["login"])) {
 
                             <div class="button">
                                 <button class="btn-kembali">
-                                    <a href="#" class="text-data">Kembali</a>
+                                    <a href="<?= BASE ?>list" class="text-data">Kembali</a>
                                 </button>
                             </div>
                         </div>
                         <div class="text">
 
-                            <p class="text-info">Judul</p>
-                            <h3></h3>
+                            <p class="text-info">Nisn</p>
+                            <h3><?= $data["nisn"] ?></h3>
 
                             <p class="text-info">Penerbit</p>
-                            <h3></h3>
+                            <h3><?= $data["nama"] ?></h3>
 
-                            <p class="text-info">Jenis Buku</p>
-                            <h3></h3>
+                            <p class="text-info">Jenis</p>
+                            <h3><?= $data["jenkel"] ?></h3>
 
-                            <p class="text-info">Stok</p>
-                            <h3></h3>
+                            <p class="text-info">Agama</p>
+                            <h3><?= $data["agama"] ?></h3>
 
-                            <p class="text-info">Catatan</p>
-                            <h3>></h3>
+                            <p class="text-info">Alamat</p>
+                            <h3><?= $data["alamat"] ?></h3>
 
                         </div>
                     </div>

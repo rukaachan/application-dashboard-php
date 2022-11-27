@@ -4,7 +4,7 @@ session_start();
 require_once('../models/functions.php');
 
 if (isset($_SESSION["login"])) {
-    header("Location: ../views/dashboard_rplb_35.php");
+    header("Location: ../controller/c_dashboard.php?aksi=dashboard");
     exit;
 }
 
@@ -24,7 +24,7 @@ if (isset($_POST["login"])) {
 
             $_SESSION["login"] = true;
 
-            header("Location: ../views/dashboard_rplb_35.php");
+            header("Location: ../controller/c_dashboard.php?aksi=dashboard");
             exit;
         }
     }

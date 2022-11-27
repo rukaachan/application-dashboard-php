@@ -480,7 +480,7 @@ body.white .switch::before {
 /* Tabel */
 .tabel {
   position: absolute;
-  /* width: 90%; */
+  width: 90%;
   width: 80vw;
   left: 60px;
   min-height: 100vh;
@@ -614,9 +614,9 @@ body.white .switch::before {
   margin: 0 0 0 100px
 }
 
-.container-detaildata .image .under-image {
-  font-size: 25px;
-  padding-left:130px;
+.under-image {
+  font-size: 40px;
+  padding-left: 4.3em;
 }
 
 .button {
@@ -640,11 +640,17 @@ body.white .switch::before {
 }
 
 .container-detaildata img {
-  width: 35vw;
+  width: 20vw;
+  margin-left: 6em;
+  margin-top: 3em;
 }
 
 .container-detaildata .container-wrap{
   flex-basis: 50%;
+}
+
+.container-img {
+  width: 20px;
 }
 
 .text-info {

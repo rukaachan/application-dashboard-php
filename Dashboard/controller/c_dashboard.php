@@ -1,13 +1,17 @@
 <?php
 // define = definisi
-define("BASE", "http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controllers/c_dashboard.php?aksi=");
+define("BASE", "http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_dashboard.php?aksi=");
 
 $aksi = $_GET["aksi"];
 require_once("../models/functions.php");
-require_once("../app/helpers/form_helpers.php");
+require_once("../app/helper/form_helpers.php");
 
+// 
+if ($aksi == "dashboard") {
+    require_once("../views/dashboard_rplb_35.php");
+} 
 // perintah jika memilih aksi list
-if ($aksi == "list") {
+elseif ($aksi == "list") {
     $data = getAllData();
     require_once("../views/dasboard_listdata_rplb_35.php");
 }
@@ -69,3 +73,14 @@ elseif ($aksi == "cari") {
     $data = cariData($keyword);
     require_once("../views/dashboard_listdata_rplb_35.php");
 }
+
+elseif ($aksi == "login") {
+    require_once("../models/login.php");
+}
+
+elseif($aksi == "logout") {
+    require_once("../models/logout.php");
+}
+
+
+?>

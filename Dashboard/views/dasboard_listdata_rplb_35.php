@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-require_once("../controller/c_dashboard.php");
-
 if (!isset($_SESSION["login"])) {
     header("Location: ../models/login.php");
     exit;
@@ -42,7 +40,7 @@ if (!isset($_SESSION["login"])) {
 
                 <!-- menu -->
 
-                <a href="dashboard_rplb_35.php">
+                <a href="<?= BASE ?>dashboard">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
@@ -53,41 +51,41 @@ if (!isset($_SESSION["login"])) {
                 <!-- dropdown -->
 
                 <div class="iocn-link">
-                    <a href="#">
+                    <a href="<?= BASE ?>list">
                         <i class='bx bx-collection'></i>
                         <span class="link_name">List Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_listdata_rplb_35.php">List Data</a></li>
+                    <li><a href="<?= BASE ?>list">List Data</a></li>
                 </ul>
             </li>
 
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="dasboard_detaildata_rplb_35.php">
+                    <a href="<?= BASE ?>detail">
                         <i class='bx bx-book-alt'></i>
                         <span class="link_name">Detail Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_detaildata_rplb_35.php">Detail Data</a></li>
+                    <li><a href="<?= BASE ?>detail">Detail Data</a></li>
                 </ul>
             </li>
             <li>
 
                 <div class="iocn-link">
-                    <a href="dasboard_form_rplb_35.php">
+                    <a href="<?= BASE ?>tambah">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="link_name">Form</span>
                     </a>
                     <i class='bx bxs-chevron-down arrow'></i>
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="dasboard_form_rplb_35.php">Form</a></li>
+                    <li><a href="<?= BASE ?>tambah">Form</a></li>
                 </ul>
 
             </li>
@@ -128,7 +126,7 @@ if (!isset($_SESSION["login"])) {
             <li>
                 <!-- menu -->
 
-                <a href="../models/logout.php">
+                <a href="<?= BASE ?>logout">
                     <i class='bx bx-log-out'></i>
                     <span class="link_name">Log out</span>
                 </a>
@@ -172,46 +170,35 @@ if (!isset($_SESSION["login"])) {
                         <thead>
                             <tr>
                                 <td>Kode</td>
+                                <td>Kelamin</td>
+                                <td>Nama</td>
                                 <td>Gambar</td>
-                                <td>Judul</td>
-                                <td>Penerbit</td>
-                                <td>Jenis</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
 
                         <?php foreach ($data as $row) : ?>
 
-                        <tbody>
-                            <tr>
-                                <td><?= $row["barang_kode"]; ?></td>
-                                <td><img src="../assets/img/<?= $row["barang_gambar"]; ?>" alt="Barang" class="book-3d">
-                                </td>
-                                <td><?= $row["barang_judul"]; ?></td>
-                                <td><?= $row["barang_penerbit"]; ?> </td>
-                                <td><?= $row["barang_jenis"]; ?> </td>
-                                <td>
-                                    <ul>
-                                        <li><button class="detail"><a
-                                                    href="<?php BASE ?>detail&id=<?= $row["barang_kode"]; ?>">
-                                                    <i class='bx bxs-book'></i>Detail
-                                                </a></button></li>
-                                        <li><button class="edit"><a href="<?php BASE ?>editform&id=<?= $row["ediit"];>
-                                                        <i class='bx bx-edit'></i> Edit
+                            <tbody>
+                                <tr>
+                                    <td><?= $row["nisn"]; ?></td>
+                                    <td><?= $row["jenkel"]; ?></td>
+                                    <td><?= $row["nama"]; ?></td>
+                                    <td><img src="../assets/img/<?= $row["gambar"]; ?>" alt="gambar" class="image"></td>
+                                    <td>
+                                        <ul>
+                                            <li><button class="detail"><a href="<?= BASE ?>detail&id=<?= $row["nisn"]; ?>">
+                                                        <i class='bx bxs-book'></i>Detail
                                                     </a></button></li>
-                                            <li><button class="hapus"><a
-                                                        href="<?php BASE ?>=hapus&id=<?= $row["barang_kode"] ?>"
-                                                    onclick=" return confirm('yakin?');">
-                                                    <i class='bx bxs-trash'></i> Hapus
-                                                </a></button></li>
-                                    </ul>
-                                </td>
-                            </tr>
+                                            <li><button class="edit"><a href="<?= BASE ?>editform&id=<?= $row["nisn"]; ?>">
+                                                        <i class='bx bx-edit'></i> Edi</a></button></li>
+                                            <li><button class="hapus"><a href="<?= BASE ?>=hapus&id<?= $row["nisn"]; ?>" onclick=" return confirm('yakin?');"><i class='bx bxs-trash'></i> Hapus</a></button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr></tr>
                             <?php endforeach; ?>
-                            <tr>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                            </tbody>
                     </table>
                 </div>
 
