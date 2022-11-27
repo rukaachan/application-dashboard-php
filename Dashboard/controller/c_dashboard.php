@@ -6,7 +6,7 @@ $aksi = $_GET["aksi"];
 require_once("../models/functions.php");
 require_once("../app/helper/form_helpers.php");
 
-// 
+// perintah jika memilih aksi dashboard
 if ($aksi == "dashboard") {
     require_once("../views/dashboard_rplb_35.php");
 } 
@@ -24,8 +24,8 @@ elseif ($aksi == "detail") {
 }
 
 // perintah jika memilih aksi tambah
-elseif ($aksi == "tambah") {
-    require_once("../views/dashboard_form_rplb_35.php");
+elseif ($aksi == "form") {
+    require_once("../views/dasboard_form_rplb_35.php");
 }
 
 // aksi prosestambah
@@ -33,7 +33,7 @@ elseif ($aksi == "prosestambah") {
     $proses = tambahData($_POST);
     if ($proses) {
         echo "<script>alert('Data berhasil ditambahkan')</script>";
-        echo "<script>window.location='c_buku.php?aksi=list'</script>";
+        echo "<script>window.location='c_dashboard.php?aksi=list'</script>";
     } else {
         echo "<script>alert('Data tidak berhasil ditambahkan')</script>";
         echo "<script>window.history.back()</script>";
@@ -74,10 +74,12 @@ elseif ($aksi == "cari") {
     require_once("../views/dashboard_listdata_rplb_35.php");
 }
 
+// perintah jika memilih aksi login
 elseif ($aksi == "login") {
     require_once("../models/login.php");
 }
 
+// perintah jika memilih logout
 elseif($aksi == "logout") {
     require_once("../models/logout.php");
 }
