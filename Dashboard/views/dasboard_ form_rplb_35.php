@@ -2,8 +2,6 @@
 
 session_start();
 
-require_once("../controller/c_dashboard.php");
-
 if (!isset($_SESSION["login"])) {
     header("Location: ../models/login.php");
     exit;
