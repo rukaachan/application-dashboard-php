@@ -688,6 +688,14 @@ input[type=password] {
   padding-left: 50px;
 }
 
+.submit {
+  width: 10vw;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: #6C63FF;  
+}
+
 /* Comingsoon rensponsive */
 @media (max-width: 400px) {
   .sidebar.close .nav-links li .sub-menu {

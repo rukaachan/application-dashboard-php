@@ -29,14 +29,14 @@ function getData($id)
 function tambahData($data)
 {
     $kode = $data["txt_kode"];
-    $judul = $data["txt_judul"];
-    $penerbit =  $data["select_penerbit"];
-    $stok =  $data["num_stok"];
-    $jenis = $data["radio_jenis"]; 
-    $genre = $data["cek_genre_ilmu"].",".$data["cek_genre_roman"].",".$data["cek_genre_komedi"].",".$data["cek_genre_horor"].",".$data["cek_genre_action"];
-    $sinopsis = $data["txt_sinopsis"];
+    $nama = $data["txt_nama"];
+    $agama =  $data["select_agama"];
+    $jenis = $data["rd_jenkel"]; 
+    $alamat = $data["txt_alamat"];
+    $gambar = $data["file_gambar"];
     global $koneksi;
-    $sql = "INSERT INTO t_buku(buku_kode, buku_judul, buku_penerbit, buku_jenis, buku_genre, buku_stok, buku_sinopsis) VALUES ('$kode', '$judul', '$penerbit', '$jenis', '$genre', '$stok', '$sinopsis');";
+    $sql = "INSERT INTO siswa(nisn, nama, agama, jenkel, gambar, alamat)
+    VALUES ('$kode','$nama','$agama','$jenis','$gambar','$alamat');";
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }
@@ -45,7 +45,7 @@ function tambahData($data)
 function hapusData($id)
 {
     global $koneksi;
-    $sql = "DELETE FROM t_buku WHERE buku_kode='$id';";
+    $sql = "DELETE FROM siswa WHERE nisn='$id';";
     $query = mysqli_query($koneksi, $sql);
 }
 
@@ -65,15 +65,15 @@ function cariData($keyword)
 function editData($data)
 {
     $kode = $data["txt_kode"];
-    $judul = $data["txt_judul"];
-    $penerbit =  $data["select_penerbit"];
-    $stok =  $data["num_stok"];
-    $jenis = $data["radio_jenis"]; 
-    $genre = $data["cek_genre_ilmu"].",".$data["cek_genre_roman"].",".$data["cek_genre_komedi"].",".$data["cek_genre_horor"].",".$data["cek_genre_action"];
-    $sinopsis = $data["txt_sinopsis"];
+    $nama = $data["txt_nama"];
+    $agama =  $data["select_agama"];
+    $jenis = $data["rd_jenkel"];
+    $gambar = $data["file_gambar"];
+    $alamat = $data["txt_alamat"];
     global $koneksi;
-    $sql = "UPDATE t_buku SET buku_judul='$judul',buku_penerbit='$penerbit',buku_stok='$stok',buku_jenis='$jenis',buku_genre='$genre',buku_sinopsis = '$sinopsis' WHERE buku_kode = '$kode';";
-    $proses = mysqli_query($koneksi,$sql);
+    $sql = "UPDATE siswa SET nisn='$kode', nama='$nama', agama='$agama', jenkel='$jenis', gambar='$gambar', alamat='$alamat' WHERE nisn = '$kode';";
+
+    $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }
 

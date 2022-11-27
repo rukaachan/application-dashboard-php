@@ -7,6 +7,8 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
+
+var_dump($data);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ if (!isset($_SESSION["login"])) {
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Form</title>
+    <title>Form Edit</title>
 </head>
 
 <body>
@@ -163,29 +165,29 @@ if (!isset($_SESSION["login"])) {
             <!-- Detail Data List -->
             <div class="data-list">
                 <div class="content-data">
-                    <h2>Form</h2>
+                    <h2>Form Edit</h2>
                 </div>
 
                 <div class="container-form">
-                    <form action="<?= BASE ?>prosestambah" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <form action="<?= BASE ?>prosesedit" method="POST" autocomplete="off" enctype="">
                         <div class="box">
                             <div>
                                 <!-- KODE -->
                                 <label>Kode :</label><br>
-                                <input type="text" name="txt_kode" required><br>
+                                <input type="text" name="txt_kode" readonly required value="<?= $data["nisn"] ?>"><br>
 
                                 <!-- NAMA -->
                                 <label>Nama :</label><br>
-                                <input type="text" name="txt_nama" required><br>
+                                <input type="text" name="txt_nama" required value="<?= $data["nama"] ?>"><br>
 
                                 <!-- Agama -->
                                 <label>Agama : </label><br>
                                 <select id="perbuku" name="select_agama">
                                     <option disabled selected hidden value="Agama">Pilih Agama</option>
-                                    <option>ISLAM</option>
-                                    <option>KRISTEN</option>
-                                    <option>BUDDHA</option>
-                                    <option>HINDU</option>
+                                    <option <?= getSelected($data["agama"], "ISLAM"); ?>>ISLAM</option>
+                                    <option <?= getSelected($data["agama"], "KRISTEN"); ?>>KRISTEN</option>
+                                    <option <?= getSelected($data["agama"], "BUDDHA"); ?>>BUDDHA</option>
+                                    <option <?= getSelected($data["agama"], "HINDU"); ?>>HINDU</option>
                                 </select>
                                 <br>
 
@@ -195,14 +197,14 @@ if (!isset($_SESSION["login"])) {
 
                                 <!-- JENIS KELAMIN -->
                                 <label>Jenis Kelamin :</label><br>
-                                <input type="radio" name="rd_jenkel" value="L">Laki-Laki<br>
-                                <input type="radio" name="rd_jenkel" value="P">Perempuan<br>
+                                <input type="radio" name="rd_jenkel" value="L" <?= getChecked($data["jenkel"], "L"); ?>>Laki-Laki<br>
+                                <input type="radio" name="rd_jenkel" value="P" <?= getChecked($data["jenkel"], "P"); ?>>Perempuan<br>
 
                                 <br>
 
                                 <!-- GAMBAR -->
-                                <label>Gambar : </label><br>
-                                <input type="file" name="file_gambar">
+                                <label="gbrang">Gambar : </label><br>
+                                    <input type="file" name="file_gambar">
 
                             </div>
 
@@ -211,11 +213,11 @@ if (!isset($_SESSION["login"])) {
                                 <!-- CATATAN ALAMAT -->
                                 <label>Alamat : </label>
                                 <br>
-                                <textarea class="form-control" name="txt_alamat"></textarea>
+                                <textarea class="form-control" name="txt_alamat"><?= $data["alamat"] ?></textarea>
                                 <br><br>
 
                                 <!-- SUBMIT -->
-                                <button type="submit" name="simpan" class="submit">Tambah Baru</button>
+                                <button type="submit" name="simpan" class="submit">Simpan Perubahan</button>
                             </div>
                     </form>
                 </div>

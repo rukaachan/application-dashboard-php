@@ -52,7 +52,8 @@ elseif ($aksi == "hapus") {
 elseif ($aksi == "edit") {
     $id = $_GET["id"];
     $data = getData($id);
-    require_once("../views/buku/dashboard_formedit_rplb_35.php");
+    require_once("../views/dasboard_formedit_rplb_35.php");
+    require_once("../app/helper/form_helper.php");    
 }
 
 // aksi prosesedit

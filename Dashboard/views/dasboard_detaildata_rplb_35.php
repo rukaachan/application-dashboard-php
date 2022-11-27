@@ -185,10 +185,10 @@ if (!isset($_SESSION["login"])) {
                             <p class="text-info">Nisn</p>
                             <h3><?= $data["nisn"] ?></h3>
 
-                            <p class="text-info">Penerbit</p>
+                            <p class="text-info">Nama</p>
                             <h3><?= $data["nama"] ?></h3>
 
-                            <p class="text-info">Jenis</p>
+                            <p class="text-info">Jenis Kelamin</p>
                             <h3><?= $data["jenkel"] ?></h3>
 
                             <p class="text-info">Agama</p>

@@ -18,16 +18,16 @@ function getChecked($s1, $s2)
     }
 }
 
-// untuk checked genre
-function getGenre($cari, $string)
-{
-    $array = explode(",", $string);
-    $caridata = in_array($cari, $array);
-    if ($caridata)
-    {   
-        echo "checked";
-    }
-}
+// // untuk checked genre
+// function getGenre($cari, $string)
+// {
+//     $array = explode(",", $string);
+//     $caridata = in_array($cari, $array);
+//     if ($caridata)
+//     {   
+//         echo "checked";
+//     }
+// }
 
 // explode = untuk merubah string menjadi array
 // in_array = mencari data yang sesuai didalam array
