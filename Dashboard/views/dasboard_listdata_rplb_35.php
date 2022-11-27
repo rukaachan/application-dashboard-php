@@ -163,16 +163,16 @@ if (!isset($_SESSION["login"])) {
                     <div class="box-toggle">
                         <h2>Book</h2>
                         <button class="btn">
-                            <a href="<?php BASE ?>=form" class="text-data">Add Data</a>
+                            <a href="<?=BASE ?>form" class="text-data">Add Data</a>
                         </button>
                     </div>
                     <table>
                         <thead>
                             <tr>
                                 <td>Kode</td>
-                                <td>Kelamin</td>
                                 <td>Nama</td>
-                                <td>Gambar</td>
+                                <td>Agama</td>
+                                <td>Jenis Kelamin</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
@@ -182,17 +182,17 @@ if (!isset($_SESSION["login"])) {
                             <tbody>
                                 <tr>
                                     <td><?= $row["nisn"]; ?></td>
-                                    <td><?= $row["jenkel"]; ?></td>
                                     <td><?= $row["nama"]; ?></td>
-                                    <td><img src="../assets/img/<?= $row["gambar"]; ?>" alt="gambar" class="image"></td>
+                                    <td><?= $row["agama"]; ?></td>
+                                    <td><?= $row["jenkel"]; ?></td>
                                     <td>
                                         <ul>
                                             <li><button class="detail"><a href="<?= BASE ?>detail&id=<?= $row["nisn"]; ?>">
                                                         <i class='bx bxs-book'></i>Detail
                                                     </a></button></li>
-                                            <li><button class="edit"><a href="<?= BASE ?>editform&id=<?= $row["nisn"]; ?>">
-                                                        <i class='bx bx-edit'></i> Edi</a></button></li>
-                                            <li><button class="hapus"><a href="<?= BASE ?>=hapus&id<?= $row["nisn"]; ?>" onclick=" return confirm('yakin?');"><i class='bx bxs-trash'></i> Hapus</a></button></li>
+                                            <li><button class="edit"><a href="<?= BASE ?>edit&id=<?= $row["nisn"]; ?>">
+                                                        <i class='bx bx-edit'></i> Edit</a></button></li>
+                                            <li><button class="hapus"><a href="<?= BASE ?>hapus&id=<?= $row["nisn"]; ?>" onclick=" return confirm('yakin?');"><i class='bx bxs-trash'></i> Hapus</a></button></li>
                                         </ul>
                                     </td>
                                 </tr>
