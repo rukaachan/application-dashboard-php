@@ -83,6 +83,11 @@ elseif ($aksi == "login") {
 // perintah jika memilih logout
 elseif($aksi == "logout") {
     require_once("../models/logout.php");
+} 
+
+// perintah jika memilih register
+elseif ($aksi == "register") {
+    require_once("../models/register.php");
 }
 
 
