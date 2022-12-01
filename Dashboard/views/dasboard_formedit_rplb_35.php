@@ -7,8 +7,6 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-
-var_dump($data);
 ?>
 
 <!DOCTYPE html>
