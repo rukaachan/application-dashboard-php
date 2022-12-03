@@ -246,6 +246,7 @@ img {
   color: #fff;
   font-size: 30px;
   cursor: pointer;
+  display: inline-block;
 }
 
 /* set-icon bell dan sun */
@@ -253,7 +254,6 @@ img {
 .bxs-bell {
   font-size: 15px;
   color: #fff;
-  display: flex;
   float: right;
   padding-top: 20px;
   margin-right: 80px;
@@ -261,8 +261,28 @@ img {
 
 /* set-text */
 .links_side {
-  padding-left: 5px;
+  padding-left: 20px;
+  color: #fff;
 }
+
+.menu_nav {
+  font-size: 15px;
+  color: #fff;
+  position: absolute;
+  margin-top: -45px;
+  left: 90px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.link_menu {
+  padding-left: 0px;
+  color: #fff;
+}
+
+a {text-decoration: none;}
 
 /* set-toggle */
 .mode-toggle {
@@ -272,8 +292,8 @@ img {
   height: 50px;
   min-width: 45px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 /* switch */
@@ -503,14 +523,17 @@ body.white .switch::before {
 
 /* set-box */
 .box-toggle {
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  pointer-events: none;
 }
 
 /* set-text*/
 .box-toggle h2 {
   font-weight: 600;
+  color: #fff;
 }
 
 /* button */
@@ -623,7 +646,7 @@ body.white .switch::before {
   margin: 15px 0 0 190px;
 }
 
-.btn-kembali{
+.btn-kembali {
   background: #6C63FF;
   border-radius: 6px;
   padding: 5px 10px;
@@ -645,7 +668,7 @@ body.white .switch::before {
   margin-top: 3em;
 }
 
-.container-detaildata .container-wrap{
+.container-detaildata .container-wrap {
   flex-basis: 50%;
 }
 
@@ -682,7 +705,7 @@ input[type=password] {
   display: flex;
   align-items: stretch;
 }
- 
+
 
 .space {
   padding-left: 50px;
@@ -693,7 +716,17 @@ input[type=password] {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 4px;
-  background: #6C63FF;  
+  background: #6C63FF;
+}
+
+.datalist {
+  color: #fff;
+  display: flex;
+  grid-gap: 20px;
+  flex-wrap: wrap;
+  background: #11101d;
+  border-radius: 20px;
+  margin: 50px 50px;
 }
 
 /* Comingsoon rensponsive */
