@@ -6,7 +6,7 @@ require_once("../models/koneksi.php");
 function getAllData()
 {
     global $koneksi;
-    $sql = "SELECT * FROM siswa;";
+    $sql = "SELECT * FROM siswa order by nama ASC";
     $query = mysqli_query($koneksi, $sql);
     while($ambilData = mysqli_fetch_assoc($query))
     {
