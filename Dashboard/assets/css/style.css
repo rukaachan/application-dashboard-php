@@ -531,7 +531,7 @@ body.white .switch::before {
 }
 
 /* set-text*/
-.box-toggle h2 {
+.box-toggle h2{
   font-weight: 600;
   color: #fff;
 }
@@ -550,6 +550,7 @@ body.white .switch::before {
 .text-data {
   color: #fff;
   text-decoration: none;
+  pointer-events: fill;
 }
 
 .data-list table {
@@ -691,7 +692,7 @@ body.white .switch::before {
 
 input[type=text],
 select,
-input[type=password] {
+input[type=password], input[type=int] {
   width: 25vw;
   padding: 8px 15px;
   margin: 8px 0;

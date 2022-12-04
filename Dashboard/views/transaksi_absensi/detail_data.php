@@ -1,9 +1,8 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../models/login.php");
+    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=login");
     exit;
 }
 
@@ -187,6 +186,9 @@ if (!isset($_SESSION["login"])) {
 
                             <p class="text-info">Nisn</p>
                             <h3><?= $data["nisn"] ?></h3>
+
+                            <p class="text-info">Tanggal</p>
+                            <h3><?= $data["tanggal"] ?></h3>
 
                             <p class="text-info">Status</p>
                             <h3><?= $data["status"] ?></h3>

@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../models/login.php");
+    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=login");
     exit;
 }
 
@@ -152,9 +152,9 @@ if (!isset($_SESSION["login"])) {
                 <i class='bx bx-menu'></i>
                 <div class="menu_nav">
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span>
-                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span>
-                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span>
-                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span>
+                        <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span>
+                            <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span>
+                                <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span>
                 </div>
                 <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 
@@ -175,9 +175,9 @@ if (!isset($_SESSION["login"])) {
             <div class="data-list">
                 <div class="content-data">
                     <div class="box-toggle">
-                        <h2>Book</h2>
+                        <h2>Absensi</h2>
                         <button class="btn">
-                            <a href="<?= BASE ?>form" class="text-data">Add Data</a>
+                            <a href="<?= BASE ?>tambah" class="text-data">Add Data</a>
                         </button>
                     </div>
                     <table>

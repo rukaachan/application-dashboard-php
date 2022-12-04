@@ -6,8 +6,13 @@ $aksi = $_GET["aksi"];
 require_once("../models/model_siswa.php");
 require_once("../app/helper/form_helpers.php");
 
+// perintah jika memilih dashboard 
+if ($aksi == "dashboard") {
+    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi");
+}
+
 // perintah jika memilih aksi list
-if ($aksi == "list") {
+elseif ($aksi == "list") {
     $data = getAllData();
     require_once("../views/data_siswa/list_data.php");
 }
@@ -20,7 +25,7 @@ elseif ($aksi == "detail") {
 }
 
 // perintah jika memilih aksi tambah
-elseif ($aksi == "form") {
+elseif ($aksi == "tambah") {
     require_once("../views/data_siswa/tambah_data.php");
 }
 

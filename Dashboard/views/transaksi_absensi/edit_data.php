@@ -1,9 +1,8 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../models/login.php");
+    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=login");
     exit;
 }
 
@@ -21,7 +20,7 @@ if (!isset($_SESSION["login"])) {
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Form Edit</title>
+    <title>Form</title>
 </head>
 
 <body>
@@ -145,48 +144,55 @@ if (!isset($_SESSION["login"])) {
     <section class="home-section">
 
         <div class="home-content">
+            <nav>
 
-            <!-- menu - sun -->
-            <i class='bx bx-menu'></i>
-            <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+                <!-- Menu Siswa -->
 
-            <!-- switch toggle -->
-            <div class="mode-toggle">
-                <span class="switch"></span>
-            </div>
-            <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+
+                <!-- menu - sun -->
+                <i class='bx bx-menu'></i>
+                <div class="menu_nav">
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
+                </div>
+                <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+
+
+                <!-- switch toggle -->
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+                <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+            </nav>
         </div>
 
+
         <!-- Tabel Detail Data List -->
-        <div class="datalist">
+        <div class="tabel">
 
             <!-- Detail Data List -->
             <div class="data-list">
                 <div class="content-data">
-                    <h2>Form Edit</h2>
+                    <h2>Tambah</h2>
                 </div>
 
                 <div class="container-form">
-                    <form action="<?= BASE ?>prosesedit" method="POST" autocomplete="off" enctype="">
+                    <form action="<?= BASE ?>prosesedit" method="POST" autocomplete="off" enctype="multipart/form-data">
                         <div class="box">
                             <div>
                                 <!-- KODE -->
-                                <label>Kode :</label><br>
-                                <input type="text" name="txt_kode" readonly required value="<?= $data["nisn"] ?>"><br>
+                                <label>Id_kehadiran : </label><br>
+                                <input type="int" name="int_kehad" required readonly value="<?= $data["id_kehadiran"] ?>"><br>
 
                                 <!-- NAMA -->
-                                <label>Nama :</label><br>
-                                <input type="text" name="txt_nama" required value="<?= $data["nama"] ?>"><br>
+                                <label>Nisn : </label><br>
+                                <input type="text" name="char_nisn" required value="<?= $data["nisn"] ?>"><br>
 
                                 <!-- Agama -->
-                                <label>Agama : </label><br>
-                                <select id="perbuku" name="select_agama">
-                                    <option disabled selected hidden value="Agama">Pilih Agama</option>
-                                    <option <?= getSelected($data["agama"], "ISLAM"); ?>>ISLAM</option>
-                                    <option <?= getSelected($data["agama"], "KRISTEN"); ?>>KRISTEN</option>
-                                    <option <?= getSelected($data["agama"], "BUDDHA"); ?>>BUDDHA</option>
-                                    <option <?= getSelected($data["agama"], "HINDU"); ?>>HINDU</option>
-                                </select>
+                                <label>Tanggal : </label><br>
+                                <input type="datetime-local" name="datetime" required value="<?= $data["tanggal"] ?>"><br>
                                 <br>
 
                             </div>
@@ -194,29 +200,21 @@ if (!isset($_SESSION["login"])) {
                             <div class="space">
 
                                 <!-- JENIS KELAMIN -->
-                                <label>Jenis Kelamin :</label><br>
-                                <input type="radio" name="rd_jenkel" value="L" <?= getChecked($data["jenkel"], "L"); ?>>Laki-Laki<br>
-                                <input type="radio" name="rd_jenkel" value="P" <?= getChecked($data["jenkel"], "P"); ?>>Perempuan<br>
+                                <label>Status :</label><br>
+                                <input type="radio" name="rd_status" value="M" <?= getChecked($data["status"], "M"); ?>>Masuk<br>
+                                <input type="radio" name="rd_status" value="TM" <?= getChecked($data["status"], "TM"); ?>>Tidak Masuk<br>
 
                                 <br>
 
                                 <!-- GAMBAR -->
-                                <label="gbrang">Gambar : </label><br>
-                                    <input type="file" name="file_gambar">
+                                <label>Keterangan : </label><br>
+                                <input type="text" name="txt_keter" required value="<?= $data["keterangan"] ?>"><br>
 
+                                <button type="submit" name="simpan" class="submit">Tambah Baru</button>
                             </div>
 
-                            <div class="space">
-
-                                <!-- CATATAN ALAMAT -->
-                                <label>Alamat : </label>
-                                <br>
-                                <textarea class="form-control" name="txt_alamat"><?= $data["alamat"] ?></textarea>
-                                <br><br>
-
-                                <!-- SUBMIT -->
-                                <button type="submit" name="simpan" class="submit">Simpan Perubahan</button>
-                            </div>
+                            <!-- SUBMIT -->
+                        </div>
                     </form>
                 </div>
             </div>

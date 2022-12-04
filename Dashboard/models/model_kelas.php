@@ -27,15 +27,12 @@ function getData($id)
 // untuk melakukan penambahan pada sebuah data
 function tambahData($data)
 {
-    $kode = $data["txt_kode"];
+    $kode = $data["int_kode"];
     $nama = $data["txt_nama"];
-    $agama =  $data["select_agama"];
-    $jenis = $data["rd_jenkel"];
-    $alamat = $data["txt_alamat"];
-    $gambar = $data["file_gambar"];
+    $kelas =  $data["int_kelas"];
     global $koneksi;
-    $sql = "INSERT INTO kelas(nisn, nama, agama, jenkel, gambar, alamat)
-    VALUES ('$kode','$nama','$agama','$jenis','$gambar','$alamat');";
+    $sql = "INSERT INTO kelas(id_kelas, nama_kelas, id_tahun_ajaran)
+    VALUES ('$kode','$nama','$kelas');";
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }
@@ -44,7 +41,7 @@ function tambahData($data)
 function hapusData($id)
 {
     global $koneksi;
-    $sql = "DELETE FROM kelas WHERE nisn='$id';";
+    $sql = "DELETE FROM kelas WHERE id_kelas='$id';";
     $query = mysqli_query($koneksi, $sql);
 }
 
@@ -63,15 +60,11 @@ function cariData($keyword)
 // untuk melakukan edit pada sebuah data
 function editData($data)
 {
-    $kode = $data["txt_kode"];
+    $kode = $data["int_kode"];
     $nama = $data["txt_nama"];
-    $agama =  $data["select_agama"];
-    $jenis = $data["rd_jenkel"];
-    $gambar = $data["file_gambar"];
-    $alamat = $data["txt_alamat"];
+    $kelas = $data["int_kelas"];
     global $koneksi;
-    $sql = "UPDATE kelas SET nisn='$kode', nama='$nama', agama='$agama', jenkel='$jenis', gambar='$gambar', alamat='$alamat' WHERE nisn = '$kode';";
-
+    $sql = "UPDATE kelas SET nama_kelas='$nama', id_tahun_ajaran='$kelas' WHERE id_kelas = '$kode';";
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }

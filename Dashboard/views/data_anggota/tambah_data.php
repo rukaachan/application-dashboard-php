@@ -1,9 +1,8 @@
 <?php
-
 session_start();
 
 if (!isset($_SESSION["login"])) {
-    header("Location: ../models/login.php");
+    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=login");
     exit;
 }
 
@@ -145,17 +144,30 @@ if (!isset($_SESSION["login"])) {
     <section class="home-section">
 
         <div class="home-content">
+            <nav>
 
-            <!-- menu - sun -->
-            <i class='bx bx-menu'></i>
-            <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+                <!-- Menu Siswa -->
 
-            <!-- switch toggle -->
-            <div class="mode-toggle">
-                <span class="switch"></span>
-            </div>
-            <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+
+                <!-- menu - sun -->
+                <i class='bx bx-menu'></i>
+                <div class="menu_nav">
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
+                </div>
+                <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+
+
+                <!-- switch toggle -->
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+                <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+            </nav>
         </div>
+
 
         <!-- Tabel Detail Data List -->
         <div class="tabel">
@@ -163,60 +175,30 @@ if (!isset($_SESSION["login"])) {
             <!-- Detail Data List -->
             <div class="data-list">
                 <div class="content-data">
-                    <h2>Form</h2>
+                    <h2>Tambah</h2>
                 </div>
 
                 <div class="container-form">
-                    <form action="<?= BASE ?>prosestambah" method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <form action="<?= BASE ?>prosestambah" method="POST" autocomplete="off" enctype="">
                         <div class="box">
                             <div>
                                 <!-- KODE -->
-                                <label>Kode :</label><br>
-                                <input type="text" name="txt_kode" required><br>
+                                <label>Id_anggota</label><br>
+                                <input type="int" name="int_anggota" required><br>
 
                                 <!-- NAMA -->
-                                <label>Nama :</label><br>
-                                <input type="text" name="txt_nama" required><br>
+                                <label>Id_kelas</label><br>
+                                <input type="text" name="int_kelas" required><br>
 
                                 <!-- Agama -->
-                                <label>Agama : </label><br>
-                                <select id="perbuku" name="select_agama">
-                                    <option disabled selected hidden value="Agama">Pilih Agama</option>
-                                    <option>ISLAM</option>
-                                    <option>KRISTEN</option>
-                                    <option>BUDDHA</option>
-                                    <option>HINDU</option>
-                                </select>
+                                <label>Nisn</label><br>
+                                <input type="int" name="char_nisn" required><br>
                                 <br>
-
-                            </div>
-
-                            <div class="space">
-
-                                <!-- JENIS KELAMIN -->
-                                <label>Jenis Kelamin :</label><br>
-                                <input type="radio" name="rd_jenkel" value="L">Laki-Laki<br>
-                                <input type="radio" name="rd_jenkel" value="P">Perempuan<br>
-
-                                <br>
-
-                                <!-- GAMBAR -->
-                                <label>Gambar : </label><br>
-                                <input type="file" name="file_gambar">
-
-                            </div>
-
-                            <div class="space">
-
-                                <!-- CATATAN ALAMAT -->
-                                <label>Alamat : </label>
-                                <br>
-                                <textarea class="form-control" name="txt_alamat"></textarea>
-                                <br><br>
-
-                                <!-- SUBMIT -->
                                 <button type="submit" name="simpan" class="submit">Tambah Baru</button>
+
                             </div>
+                            <!-- SUBMIT -->
+                        </div>
                     </form>
                 </div>
             </div>

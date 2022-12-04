@@ -27,15 +27,14 @@ function getData($id)
 // untuk melakukan penambahan pada sebuah data
 function tambahData($data)
 {
-    $kode = $data["txt_kode"];
-    $nama = $data["txt_nama"];
-    $agama =  $data["select_agama"];
-    $jenis = $data["rd_jenkel"];
-    $alamat = $data["txt_alamat"];
-    $gambar = $data["file_gambar"];
+    $kode = $data["int_kehad"];
+    $nisn = $data["char_nisn"];
+    $tanggal =  $data["datetime"];
+    $status = $data["rd_status"];
+    $keterangan = $data["txt_keter"];
     global $koneksi;
-    $sql = "INSERT INTO kehadiran(nisn, nama, agama, jenkel, gambar, alamat)
-    VALUES ('$kode','$nama','$agama','$jenis','$gambar','$alamat');";
+    $sql = "INSERT INTO kehadiran(id_kehadiran, nisn, tanggal, status,keterangan)
+    VALUES ('$kode','$nisn','$tanggal','$status', '$keterangan');";
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }
@@ -44,7 +43,7 @@ function tambahData($data)
 function hapusData($id)
 {
     global $koneksi;
-    $sql = "DELETE FROM kehadiran WHERE nisn='$id';";
+    $sql = "DELETE FROM kehadiran WHERE id_kehadiran='$id';";
     $query = mysqli_query($koneksi, $sql);
 }
 
@@ -63,14 +62,13 @@ function cariData($keyword)
 // untuk melakukan edit pada sebuah data
 function editData($data)
 {
-    $kode = $data["txt_kode"];
-    $nama = $data["txt_nama"];
-    $agama =  $data["select_agama"];
-    $jenis = $data["rd_jenkel"];
-    $gambar = $data["file_gambar"];
-    $alamat = $data["txt_alamat"];
+    $kode = $data["int_kehad"];
+    $nisn = $data["char_nisn"];
+    $tanggal =  $data["datetime"];
+    $status = $data["rd_status"];
+    $keterangan = $data["txt_keter"];
     global $koneksi;
-    $sql = "UPDATE kehadiran SET nisn='$kode', nama='$nama', agama='$agama', jenkel='$jenis', gambar='$gambar', alamat='$alamat' WHERE nisn = '$kode';";
+    $sql = "UPDATE kehadiran SET nisn='$nisn', tanggal='$tanggal', status='$status', keterangan='$keterangan' WHERE id_kehadiran = '$kode';";
 
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
