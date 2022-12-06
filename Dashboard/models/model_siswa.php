@@ -76,4 +76,3 @@ function editData($data)
     $proses = mysqli_query($koneksi, $sql);
     return $proses;
 }
-

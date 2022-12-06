@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION["login"])) {
-    header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=login");
-    exit;
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 

@@ -5,6 +5,7 @@ define("BASE", "http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c
 $aksi = $_GET["aksi"];
 require_once("../models/model_anggota.php");
 require_once("../app/helper/form_helpers.php");
+require_once("../models/user/function.php");
 
 
 // perintah jika memilih dashboard 
@@ -15,6 +16,7 @@ if ($aksi == "dashboard") {
 // perintah jika memilih aksi list
 elseif ($aksi == "list") {
     $data = getAllData();
+    $sess = setsession();
     require_once("../views/data_anggota/list_data.php");
 }
 
@@ -22,11 +24,13 @@ elseif ($aksi == "list") {
 elseif ($aksi == "detail") {
     $id = $_GET["id"];
     $data = getData($id);
+    $sess = setsession();
     require_once("../views/data_anggota/detail_data.php");
 }
 
 // perintah jika memilih aksi tambah
 elseif ($aksi == "tambah") {
+    $sess = setsession();
     require_once("../views/data_anggota/tambah_data.php");
 }
 
@@ -54,6 +58,7 @@ elseif ($aksi == "hapus") {
 elseif ($aksi == "edit") {
     $id = $_GET["id"];
     $data = getData($id);
+    $sess = setsession();
     require_once("../views/data_anggota/edit_data.php");
     require_once("../app/helper/form_helper.php");
 }
