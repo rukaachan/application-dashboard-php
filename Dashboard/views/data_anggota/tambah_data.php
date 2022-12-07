@@ -56,14 +56,14 @@
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="<?= BASE ?>detail">
+                    <a href="" onclick="alert('Anda harus memilih list data terlebih dahulu')">
                         <i class='bx bx-book-alt'></i>
                         <span class="link_name">Detail Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
                 <ul class="sub-menu">
-                    <li><a href="<?= BASE ?>detail">Detail Data</a></li>
+                    <li><a href="" onclick="alert('Anda harus memilih list data terlebih dahulu')">Detail Data</a></li>
                 </ul>
             </li>
             <li>

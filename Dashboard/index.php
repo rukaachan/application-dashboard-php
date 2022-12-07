@@ -59,21 +59,21 @@
                      <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                  </div>
                  <ul class="sub-menu">
-                     <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list">List Data</a></li>
+                     <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list" name="list">List Data</a></li>
                  </ul>
              </li>
 
              <!-- dropdown -->
              <li>
                  <div class="iocn-link">
-                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=detail">
+                     <a href="" onclick="alert('Anda harus memilih list data terlebih dahulu')">
                          <i class='bx bx-book-alt'></i>
                          <span class="link_name">Detail Data</span>
                      </a>
                      <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                  </div>
                  <ul class="sub-menu">
-                     <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=detail">Detail Data</a></li>
+                     <li><a href="">Detail Data</a></li>
                  </ul>
              </li>
              <li>

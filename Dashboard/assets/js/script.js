@@ -20,8 +20,6 @@ modeToggle.addEventListener("click", () => {
     body.classList.toggle("white");
 });
 
-
-
 // APEX CHART 
 
 var options = {
