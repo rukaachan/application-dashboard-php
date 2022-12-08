@@ -23,7 +23,10 @@
 
      <!-- CSS -->
      <link rel="stylesheet" href="assets/css/style.css">
- </head>
+
+     <!-- set ico -->
+     <link href="assets/img/ico/administrator.ico" rel="shortcut icon"> 
+    </head>
 
  <body>
 

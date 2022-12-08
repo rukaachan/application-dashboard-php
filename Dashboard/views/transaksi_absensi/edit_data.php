@@ -11,6 +11,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Form</title>
+
+    <!-- set ico -->
+    <link href="../assets/img/ico/administrator.ico" rel="shortcut icon">
+    
 </head>
 
 <body>
@@ -174,7 +178,7 @@
                             <div>
                                 <!-- KODE -->
                                 <label>Id_kehadiran : </label><br>
-                                <input type="int" name="int_kehad" placeholder= "Masukkan Id" required readonly value="<?= $data["id_kehadiran"] ?>"><br>
+                                <input type="int" name="int_kehad" placeholder="Masukkan Id" required readonly value="<?= $data["id_kehadiran"] ?>"><br>
 
                                 <!-- NAMA -->
                                 <label>Nisn : </label><br>

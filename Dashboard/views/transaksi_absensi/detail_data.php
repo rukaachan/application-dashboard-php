@@ -11,6 +11,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Detail Data</title>
+
+    <!-- set ico -->
+    <link href="../assets/img/ico/administrator.ico" rel="shortcut icon">
+
 </head>
 
 <body>
@@ -168,7 +172,7 @@
                     <div class="box-toggle">
                         <h2>Detail Data</h2>
                         <button class="btn">
-                            <a href="#" class="text-data">Edit</a>
+                            <a href="<?= BASE ?>edit&id=<?= $data["id_kehadiran"]; ?>" class="text-data">Edit</a>
                         </button>
                     </div>
 

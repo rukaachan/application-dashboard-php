@@ -11,6 +11,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Detail Data</title>
+
+    <!-- set ico -->
+    <link href="../assets/img/ico/administrator.ico" rel="shortcut icon">
+
 </head>
 
 <body>
@@ -145,7 +149,7 @@
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
                 </div>
-                
+
                 <!-- menu - sun -->
                 <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 
@@ -168,7 +172,7 @@
                     <div class="box-toggle">
                         <h2>Detail Data</h2>
                         <button class="btn">
-                            <a href="#" class="text-data">Edit</a>
+                            <a href="<?= BASE ?>edit&id=<?= $data["nisn"]; ?>" class="text-data">Edit</a>
                         </button>
                     </div>
 

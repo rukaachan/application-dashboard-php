@@ -11,6 +11,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>List Data</title>
+
+    <!-- set ico -->
+    <link href="../assets/img/ico/administrator.ico" rel="shortcut icon">
+    
 </head>
 
 <body>
@@ -67,7 +71,7 @@
                 </ul>
             </li>
             <li>
-               
+
                 <div class="iocn-link">
                     <a href="<?= BASE ?>tambah">
                         <i class='bx bx-pie-chart-alt-2'></i>

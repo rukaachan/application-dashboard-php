@@ -11,6 +11,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Detail Data</title>
+
+    <!-- set ico -->
+    <link href="../assets/img/ico/administrator.ico" rel="shortcut icon">
+
 </head>
 
 <body>
@@ -167,32 +171,32 @@
                     <div class="box-toggle">
                         <h2>Detail Data</h2>
                         <button class="btn">
-                            <a href="#" class="text-data">Edit</a>
+                            <a href="<?= BASE ?>edit&id=<?= $data["id_kelas"]; ?>" class="text-data">Edit</a>
                         </button>
                     </div>
-                    
+
                     <div class="container-detaildata-short">
                         <div class="container-wrap-short">
-                            </div>
-                            
-                            <div class="text">
-                                
-                                <p class="text-info">Kelas</p>
-                                <h3><?= $data["id_kelas"] ?></h3>
-                                
-                                <p class="text-info">Nama</p>
-                                <h3><?= $data["nama_kelas"] ?></h3>
-                                
-                                <p class="text-info">Tahun Ajaran</p>
-                                <h3><?= $data["id_tahun_ajaran"] ?></h3>
-                                
-                                <div class="button">
-                                    <button class="btn-kembali">
-                                        <a href="<?= BASE ?>list" class="text-data">Kembali</a>
-                                    </button>
-                                </div>
+                        </div>
+
+                        <div class="text">
+
+                            <p class="text-info">Kelas</p>
+                            <h3><?= $data["id_kelas"] ?></h3>
+
+                            <p class="text-info">Nama</p>
+                            <h3><?= $data["nama_kelas"] ?></h3>
+
+                            <p class="text-info">Tahun Ajaran</p>
+                            <h3><?= $data["id_tahun_ajaran"] ?></h3>
+
+                            <div class="button">
+                                <button class="btn-kembali">
+                                    <a href="<?= BASE ?>list" class="text-data">Kembali</a>
+                                </button>
                             </div>
                         </div>
+                    </div>
                 </div>
     </section>
 
