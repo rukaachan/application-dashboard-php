@@ -133,17 +133,31 @@
     <section class="home-section">
 
         <div class="home-content">
+            <nav>
 
-            <!-- menu - sun -->
-            <i class='bx bx-menu'></i>
-            <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+                <!-- Menu Siswa -->
 
-            <!-- switch toggle -->
-            <div class="mode-toggle">
-                <span class="switch"></span>
-            </div>
-            <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+
+                <i class='bx bx-menu'></i>
+                <div class="menu_nav">
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
+                </div>
+
+                <!-- menu - sun -->
+                <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
+
+
+                <!-- switch toggle -->
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+                <i class='bx bxs-bell'><span class="links_side">Notify</span></i>
+            </nav>
         </div>
+
 
         <!-- Tabel Detail Data List -->
         <div class="datalist">
@@ -158,16 +172,9 @@
                         </button>
                     </div>
 
-                    <div class="container-detaildata">
-                        <div class="contain">
-                            <img src="#" alt="Barang">
-                            <h4 class="under-image"></h4>
+                    <div class="container-detaildata-short">
+                        <div class="container-wrap-short">
 
-                            <div class="button">
-                                <button class="btn-kembali">
-                                    <a href="<?= BASE ?>list" class="text-data">Kembali</a>
-                                </button>
-                            </div>
                         </div>
                         <div class="text">
 
@@ -186,6 +193,11 @@
                             <p class="text-info">Keterangan</p>
                             <h3><?= $data["keterangan"] ?></h3>
 
+                            <div class="button">
+                                <button class="btn-kembali">
+                                    <a href="<?= BASE ?>list" class="text-data">Kembali</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

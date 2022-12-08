@@ -1,4 +1,5 @@
  <?php
+    // untuk set session tidak langsung masuk ke dashboard  
     session_start();
 
     if (!isset($_SESSION["login"])) {
@@ -56,7 +57,6 @@
                          <i class='bx bx-collection'></i>
                          <span class="link_name">List Data</span>
                      </a>
-                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                  </div>
                  <ul class="sub-menu">
                      <li><a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list" name="list">List Data</a></li>
@@ -70,7 +70,6 @@
                          <i class='bx bx-book-alt'></i>
                          <span class="link_name">Detail Data</span>
                      </a>
-                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                  </div>
                  <ul class="sub-menu">
                      <li><a href="">Detail Data</a></li>
@@ -147,7 +146,7 @@
                  <!-- Menu Siswa -->
 
 
-                 <!-- menu - sun -->
+                 <!-- Option for another menu -->
                  <i class='bx bx-menu'></i>
                  <div class="menu_nav">
                      <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
@@ -155,6 +154,8 @@
                      <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
                      <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
                  </div>
+
+                 <!-- menu - sun -->
                  <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 
 

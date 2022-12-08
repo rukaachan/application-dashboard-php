@@ -1,5 +1,6 @@
 <?php
 // define = definisi
+// agar lebih mudah mengaplikasikan link localhost 
 define("BASE", "http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=");
 
 $aksi = $_GET["aksi"];

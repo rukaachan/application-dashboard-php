@@ -1,10 +1,6 @@
 /* Google Fonts Import Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ROOT */
-
-/*  Comingsoon lightmode */
-
 * {
   padding: 0;
   margin: 0;
@@ -54,12 +50,12 @@ button[type=submit] {
   padding: 14px 20px;
   margin: 8px 0;
   background: #6C63FF;
+  border-radius: 15px;
 }
 
-
-.text-error {
+/* .text-error {
   text-align: center;
   padding-top: 100px;
   font-size: 30px;
   color: red;
-}
+} */

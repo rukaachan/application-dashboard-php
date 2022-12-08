@@ -12,8 +12,8 @@
   --box-hover: #1d1b31;
 }
 
+/* untuk css bila ke light mode */
 body.white {
-  /* --primary-color: #EEF4F3; */
   --primary-color: #EEEEEE;
   --text-color: #000;
   --boxes-color: #CFD8DC;
@@ -22,12 +22,14 @@ body.white {
   --box-hover: #EEF1FF;
 }
 
+/* set-up */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 
 body {
   background: var(--primary-color);
@@ -284,6 +286,7 @@ img {
   color: var(--text-color);
 }
 
+/* css untuk menu navbar atas */
 .menu_nav {
   font-size: 15px;
   color: var(--text-color);
@@ -473,8 +476,6 @@ body.white .switch::before {
   grid-gap: 20px;
   margin-top: 20px;
   flex-wrap: wrap;
-  /* background: #1d1b31; */
-  /* background: #222222; */
 }
 
 /* box */
@@ -655,6 +656,7 @@ body.white .switch::before {
   color: #000;
 }
 
+/* set-detail */
 .content-data .content-image img {
   width: 35vw;
   margin: 0 0 0 100px
@@ -712,6 +714,7 @@ body.white .switch::before {
   margin: 25px 0 0 40px;
 }
 
+/* untuk input style */
 input[type=text],
 select,
 input[type=password],
@@ -735,25 +738,16 @@ input[type=int] {
   padding-left: 50px;
 }
 
-.submit {
-  width: 10vw;
-  color: #fff;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background: #6C63FF;
-}
-
-
+/* button submit */
 button[type=submit] {
-  width: 28vh;
+  width: 180px;
   color: #fff;
   padding: 14px 20px;
   margin: 8px 0;
+  border-radius: 15px;
   background: #6C63FF;
 }
 
-
-/* Comingsoon rensponsive */
 @media (max-width: 400px) {
   .sidebar.close .nav-links li .sub-menu {
     display: none;

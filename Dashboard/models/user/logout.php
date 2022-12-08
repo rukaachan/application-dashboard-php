@@ -1,5 +1,10 @@
 <?php
 
+// dsini session yang sudah start, akan dihancurkan
+// begitu juga dengan cookie (remember me)
+// dalam waktu yang telah di tentukan
+// lalu akan kembali ke halaman login lagi
+
 session_start();
 $_SESSION = [];
 session_unset();

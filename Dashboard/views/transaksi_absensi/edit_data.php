@@ -174,7 +174,7 @@
                             <div>
                                 <!-- KODE -->
                                 <label>Id_kehadiran : </label><br>
-                                <input type="int" name="int_kehad" required readonly value="<?= $data["id_kehadiran"] ?>"><br>
+                                <input type="int" name="int_kehad" placeholder= "Masukkan Id" required readonly value="<?= $data["id_kehadiran"] ?>"><br>
 
                                 <!-- NAMA -->
                                 <label>Nisn : </label><br>
@@ -200,7 +200,7 @@
                                 <label>Keterangan : </label><br>
                                 <input type="text" name="txt_keter" required value="<?= $data["keterangan"] ?>"><br>
 
-                                <button type="submit" name="simpan" class="submit">Tambah Baru</button>
+                                <button type="submit" name="simpan" class="submit">Simpan Perubahan</button>
                             </div>
 
                             <!-- SUBMIT -->

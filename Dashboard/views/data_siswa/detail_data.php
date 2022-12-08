@@ -138,7 +138,6 @@
                 <!-- Menu Siswa -->
 
 
-                <!-- menu - sun -->
                 <i class='bx bx-menu'></i>
                 <div class="menu_nav">
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
@@ -146,6 +145,8 @@
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
                     <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
                 </div>
+                
+                <!-- menu - sun -->
                 <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 
 
