@@ -56,9 +56,9 @@
             <!-- dropdown -->
             <li>
                 <div class="iocn-link">
-                    <a href="" onclick="alert('Anda harus memilih list data terlebih dahulu') ">
+                    <a href="" onclick="alert('Anda harus memilih list data terlebih dahulu')">
                         <i class='bx bx-book-alt'></i>
-                        <span class=" link_name">Detail Data</span>
+                        <span class="link_name">Detail Data</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down arrow'></i> -->
                 </div>
@@ -68,61 +68,61 @@
             </li>
             <li>
 
-                <div class=" iocn-link">
-                            <a href="<?= BASE ?>tambah">
-                                <i class='bx bx-pie-chart-alt-2'></i>
-                                <span class="link_name">Form</span>
-                            </a>
-                            <i class='bx bxs-chevron-down arrow'></i>
-    </div>
-    <ul class="sub-menu">
-        <li><a href="<?= BASE ?>tambah">Form</a></li>
-    </ul>
+                <div class="iocn-link">
+                    <a href="<?= BASE ?>tambah">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="link_name">Form</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a href="<?= BASE ?>tambah">Form</a></li>
+                </ul>
 
-    </li>
-    <li>
+            </li>
+            <li>
 
-        <!-- menu -->
+                <!-- menu -->
 
-        <a href="#">
-            <i class='bx bx-line-chart'></i>
-            <span class="link_name">Chart</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Chart</a></li>
+                <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link_name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Chart</a></li>
+                </ul>
+            </li>
+            <li>
+                <!-- menu -->
+
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link_name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Explore</a></li>
+                </ul>
+            </li>
+            <li>
+                <!-- menu -->
+
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+            </li>
+            <li>
+                <!-- menu -->
+
+                <a href="<?= BASE ?>logout">
+                    <i class='bx bx-log-out'></i>
+                    <span class="link_name">Log out</span>
+                </a>
+            </li>
         </ul>
-    </li>
-    <li>
-        <!-- menu -->
-
-        <a href="#">
-            <i class='bx bx-compass'></i>
-            <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-    </li>
-    <li>
-        <!-- menu -->
-
-        <a href="#">
-            <i class='bx bx-cog'></i>
-            <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-            <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-    </li>
-    <li>
-        <!-- menu -->
-
-        <a href="<?= BASE ?>logout">
-            <i class='bx bx-log-out'></i>
-            <span class="link_name">Log out</span>
-        </a>
-    </li>
-    </ul>
     </div>
 
     <!-- End Sidebar -->
@@ -141,10 +141,10 @@
                 <!-- menu - sun -->
                 <i class='bx bx-menu'></i>
                 <div class="menu_nav">
-                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span>
-                        <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span>
-                            <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span>
-                                <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_siswa.php?aksi=list"><span class="links_side">Siswa</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_kelas.php?aksi=list"><span class="links_side">Kelas</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_anggota.php?aksi=list"><span class="links_side">Anggota</span></a>
+                    <a href="http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi/controller/c_absensi.php?aksi=list"><span class="links_side">Absensi</span></a>
                 </div>
                 <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 

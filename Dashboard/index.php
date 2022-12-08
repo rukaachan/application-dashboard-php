@@ -158,7 +158,7 @@
                  <i class='bx bxs-sun'><span class="links_side">Switch</span></i>
 
 
-                 <!-- switch toggle -->
+                 <!-- switch toggle -->z
                  <div class="mode-toggle">
                      <span class="switch"></span>
                  </div>

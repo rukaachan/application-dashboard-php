@@ -160,7 +160,7 @@
 
 
         <!-- Tabel Detail Data List -->
-        <div class="tabel">
+        <div class="datalist">
 
             <!-- Detail Data List -->
             <div class="data-list">

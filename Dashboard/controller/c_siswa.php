@@ -7,6 +7,7 @@ require_once("../models/model_siswa.php");
 require_once("../app/helper/form_helpers.php");
 require_once("../models/user/function.php");
 
+
 // perintah jika memilih dashboard 
 if ($aksi == "dashboard") {
     header("Location: http://localhost/bew_xirplb_1920_35_Taufik_NurFauzi");
@@ -72,13 +73,6 @@ elseif ($aksi == "prosesedit") {
         echo "<script>alert('Data tidak berhasil diedit')</script>";
         echo "<script>window.history.back()</script>";
     }
-}
-
-// perintah jika memilih aksi cari
-elseif ($aksi == "cari") {
-    $keyword = $_GET["keyword"];
-    $data = cariData($keyword);
-    require_once("../views/dashboard_listdata_rplb_35.php");
 }
 
 // perintah jika memilih aksi login

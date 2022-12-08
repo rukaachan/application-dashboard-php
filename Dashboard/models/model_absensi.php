@@ -47,18 +47,6 @@ function hapusData($id)
     $query = mysqli_query($koneksi, $sql);
 }
 
-// untuk melakukan mesin pencari
-function cariData($keyword)
-{
-    global $koneksi;
-    $sql = "SELECT * FROM t_buku WHERE buku_judul LIKE '%$keyword%';";
-    $query = mysqli_query($koneksi, $sql);
-    while ($ambilData = mysqli_fetch_assoc($query)) {
-        $list[] = $ambilData;
-    }
-    return $list;
-}
-
 // untuk melakukan edit pada sebuah data
 function editData($data)
 {

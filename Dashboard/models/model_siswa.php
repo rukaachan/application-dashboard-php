@@ -49,18 +49,6 @@ function hapusData($id)
     $query = mysqli_query($koneksi, $sql);
 }
 
-// untuk melakukan mesin pencari
-function cariData($keyword)
-{
-    global $koneksi;
-    $sql = "SELECT * FROM t_buku WHERE buku_judul LIKE '%$keyword%';";
-    $query = mysqli_query($koneksi, $sql);
-    while ($ambilData = mysqli_fetch_assoc($query)) {
-        $list[] = $ambilData;
-    }
-    return $list;
-}
-
 // untuk melakukan edit pada sebuah data
 function editData($data)
 {
@@ -71,7 +59,7 @@ function editData($data)
     $gambar = $data["file_gambar"];
     $alamat = $data["txt_alamat"];
     global $koneksi;
-    $sql = "UPDATE siswa SET nisn='$kode', nama='$nama', agama='$agama', jenkel='$jenis', gambar='$gambar', alamat='$alamat' WHERE nisn = '$kode';";
+    $sql = "UPDATE siswa SET nama='$nama', agama='$agama', jenkel='$jenis', gambar='$gambar', alamat='$alamat' WHERE nisn = '$kode';";
 
     $proses = mysqli_query($koneksi, $sql);
     return $proses;

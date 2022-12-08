@@ -159,7 +159,7 @@
                     </div>
 
                     <div class="container-detaildata">
-                        <div class="container-wrap">
+                        <div class="contain">
                             <img src="#" alt="Barang">
                             <h4 class="under-image"></h4>
 

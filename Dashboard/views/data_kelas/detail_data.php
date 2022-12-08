@@ -171,8 +171,8 @@
                         </button>
                     </div>
 
-                    <div class="container-detaildata">
-                        <div class="container-wrap">
+                    <div class="container-detaildata-short">
+                        <div class="container-wrap-short">
                         </div>
                         <div class="text">
 

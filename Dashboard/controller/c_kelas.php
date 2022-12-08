@@ -75,13 +75,6 @@ elseif ($aksi == "prosesedit") {
     }
 }
 
-// perintah jika memilih aksi cari
-elseif ($aksi == "cari") {
-    $keyword = $_GET["keyword"];
-    $data = cariData($keyword);
-    require_once("../views/dashboard_listdata_rplb_35.php");
-}
-
 // perintah jika memilih aksi login
 elseif ($aksi == "login") {
     require_once("../models/user/login.php");
