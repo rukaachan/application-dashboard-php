@@ -1,0 +1,1 @@
+This application is a simple example of a CRUD (Create, Read, Update, Delete) dashboard built using native PHP without a framework. This application is designed to facilitate data management through an intuitive web interface.
